@@ -1,0 +1,224 @@
+@charset "UTF-8";
+@import url(style_Reset.css);
+
+div#headerArea {
+    width: 100%;
+    padding: 2px 0;
+    /* border: 1px solid #f80; */
+    background-color: #f1e7d5;
+    margin-bottom: 48px;
+
+    position: sticky;
+    right: 0;
+    top: 0;
+
+}
+
+
+header#header {
+    width: 1000px;
+    /* border: 1px solid #08f; */
+    margin: 0 auto;
+
+    justify-content: space-between;    
+}
+
+
+/* div#headerLogoArea 시작 */
+#headerArea #headerLogoArea {
+    margin-top: 66px;
+}
+/* div#headerLogoArea 끝 */
+
+
+/* div#headerArea nav#headerLnb 시작 */
+#headerArea nav#headerLnb {
+    /* border: 1px solid #000; */
+    margin: 16px 0;
+}
+#headerArea nav#headerLnb li>a {
+    color: #5f4a38;
+    font-size: 12px;
+    font-family: 'Jost', sans-serif;    
+    margin: 0 6px;
+}
+
+#headerArea div#cartNlistMenu {    
+    /* border: 1px solid #000; */
+    margin: 31px 0 38px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#headerArea div#cartLink {
+    width: 48px;
+    height: 36px;
+    /* border: 1px solid #f80; */
+    margin: 0 18px;
+    background-image: url(../images/btn_cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px 36px;
+}
+
+#headerArea #cartLink span#cartGoodsCnt {
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    font-size: 10px;    
+    text-align: center;
+    line-height: 14px;
+    border-radius: 50%;
+    background-color: #0024ff;
+    display: inline-block;
+}
+
+#headerArea div#sideMenu {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid #f80; */
+}
+
+#headerArea div#sideMenu span {
+    width: 100%;
+    height: 2px;
+    margin: 10px 0 9px;
+    background-color: #5f4a38;    
+    display: block;
+}
+
+#headerArea div#sideMenu span:nth-child(2) {
+    width: 70%;
+}
+#headerArea div#sideMenu span:nth-child(3) {
+    width: 40%;
+}
+/* div#headerArea nav#headerLnb 끝 */
+
+
+
+/* div#wrap 시작 */
+div#wrap {
+    width: 1000px;
+    /* border: 1px solid #000; */
+    margin: 0 auto;
+}    
+
+#wrap div#goodsPart {
+    color: #5f4a38;
+    font-size: 19px;
+    font-family: batang, sans-serif;
+    /* border: 1px solid #f80; */
+    margin-bottom: 36px;
+
+}
+
+#wrap  main#galleryListArea {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+}
+
+/* table.goodsTbl 상품 출력용 테이블 시작 */
+#wrap  main#galleryListArea>table {
+    text-align: center;
+    /* border: 1px solid #000; */
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+#wrap  main#galleryListArea>table td {
+    color: #5f4a38;
+    padding: 3px 0;
+}
+
+
+#wrap  #galleryListArea>table td.goodsDesc {
+    /* 상품설명 */  
+    color: rgba(95, 74, 56, 0.68);  
+    font-size: 12px;
+}
+
+#wrap  #galleryListArea>table td.goodsPrice span {
+    font-size: 14px;
+}
+#wrap  #galleryListArea>table td.goodsPrice span::after {
+    content: "원";
+}
+#wrap  #galleryListArea>table span.basicPrice {
+    /* 기본판매가격 */
+    color: rgba(95, 74, 56, 0.68);  
+    text-decoration: line-through;
+    margin-right: 4px;
+}
+
+#wrap  #galleryListArea>table span.salePrice {
+    /* 할인가격 */
+    color: #715844;
+    font-weight: bold;    
+}
+
+#wrap  #galleryListArea>table span.replyCnt {
+    /* 댓글 수 */
+    color: #715844;
+    width: 82px;
+    height: 19px;
+    font-size: 12px;
+    line-height: 19px;
+    /* border: 1px solid #000; */
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    display: inline-block;
+    background-color: #f1e7d5;
+}
+#wrap  #galleryListArea>table span.replyCnt::before {
+    content: "RE: ";
+}
+
+/* table.goodsTbl 상품 출력용 테이블 끝 */
+
+
+/* div#pagingArea 페이징(=페이지 나누기) 시작 */
+div#pagingArea {
+    margin-bottom: 100px;
+    justify-content: center;
+}
+div#pagingArea div.pageBox {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+}
+div#pagingArea div.pageBox a {
+    width: 100%;
+    height: 100%;
+    color: #999;
+    font-size: 12px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+div#pagingArea div.pageNum {
+    border: 1px solid #ccc;    
+    transform: translateY(2px);    
+}
+div#pagingArea div.pageBox:not(:last-child) {
+    border-right: none;
+}
+
+div#pagingArea div.nowPage a {
+    color: #555;
+    border-bottom: 3px solid #555;
+}
+
+div#pagingArea div.pageNum:hover {
+    background-color: #eee;
+}
+/* div#pagingArea 페이징(=페이지 나누기) 끝 */
+
+
+
+
